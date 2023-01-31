@@ -1,4 +1,8 @@
 const Header = () => {
+  const currentDate = new Date();
+
+  const currentYear = currentDate.getFullYear();
+
   return (
     <header>
       <i className="fa fa-times"></i>
@@ -60,7 +64,7 @@ const Header = () => {
           </li>
         </ul>
 
-        <p className="copyright">&copy; Copyright 2022 Mak Alamin</p>
+        <p className="copyright">&copy; Copyright {currentYear} Mak Alamin</p>
       </div>
     </header>
   );

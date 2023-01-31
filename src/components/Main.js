@@ -153,9 +153,18 @@ const Main = () => {
               <br />
             </p>
             <br />
-            <h2>Phone</h2>
+            <h2>Phone / WhatsApp</h2>
             <p>
-              <a href="tel:+8801739530410"> +8801739530410 </a> <br />
+              <a href="tel:+8801739530410"> +880 17 39 53 04 10 </a>
+            </p>
+            <br />
+           
+           <p>Or, </p>
+
+           <br />
+            
+            <p>
+            <a href="skype:live:makalamin012?chat"> Get me on Skype</a>
             </p>
           </div>
 
