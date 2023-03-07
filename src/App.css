@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
+
 :root {
   --color-black: #03203c;
   --link-gray: #8b9ec2;
@@ -78,13 +80,14 @@ section h1 {
   font-weight: 500;
   margin-bottom: 30px;
   color: var(--color-black);
+  font-family: 'Oswald', sans-serif;
 }
 header {
   color: #fff;
   top: 0;
   left: 0;
   height: 100vh;
-  background-color: #03203c;
+  background-color: var(--color-black);
   position: fixed;
   width: 20%;
   display: flex;
@@ -162,14 +165,14 @@ section.home {
   height: 100%;
 }
 .home h1 {
-  font-size: 3.5rem;
+  font-size: 65px;
   font-weight: 500;
   color: var(--link-light);
   text-shadow: 0 0 50px #000;
   margin-bottom: 0px;
 }
 .home h1 span {
-  font-size: 3.5rem;
+  font-size: 72px;
   color: var(--link-blue);
 }
 .home h2,
@@ -177,52 +180,14 @@ section.home {
   font-size: 1.3rem;
   color: var(--link-light);
 }
-h2.typewriter {
-  min-width: 92px;
-  max-width: fit-content;
-  position: relative;
-  padding-right: 20px;
+.home h3{
+  color: var(--color-black);
 }
-h2.typewriter:after {
-  content: "|";
-  position: absolute;
-  right: -4px;
-  color: orange;
-  font-weight: bold;
+.Typewriter {
   display: inline-block;
-  animation: blink-caret 0.75s step-end infinite;
 }
-.typewriter {
-  overflow: hidden;
-  white-space: nowrap;
-  margin-top: 15px;
-  letter-spacing: 0.15em;
-  animation: typing 5s steps(80, end);
-  animation-iteration-count: infinite;
-}
-
-/* The typing effect */
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-  70% {
-    width: 100%;
-  }
-  100% {
-    width: 0;
-  }
-}
-
-/* The typewriter cursor effect */
-@keyframes blink-caret {
-  from,
-  to {
-    color: transparent;
-  }
-  50% {
-    color: orange;
-  }
+span.Typewriter__cursor {
+  color:var(--color-black) !important;
 }
 /* Home section ends */
 

@@ -1,6 +1,16 @@
+import { useState } from "react";
 import Portfolio from "./Portfolio";
 
+import Typewriter from "typewriter-effect";
+
 const Main = () => {
+  const typingTexts = [
+    "Full Stack Web Developer",
+    "MERN Stack Developer",
+    "WordPress Expert",
+    "UI/UX Designer"
+  ]
+
   return (
     <main>
       <section
@@ -12,12 +22,21 @@ const Main = () => {
       >
         <div className="overlay">
           <i className="fa fa-bars"></i>
-          <h1>
-            MAK <span>ALAMIN</span>
-          </h1>
-          <h2 className="typewriter">
-            I am a <span>Full Stack Web Developer</span>
-          </h2>
+            <h3>Hi, I'm</h3>
+            <h1>
+              Mak <span>Alamin</span>
+            </h1>
+   
+            <h2>
+              I am a {" "}
+                <Typewriter
+                  options={{
+                    strings: typingTexts,
+                    autoStart: true,
+                    loop: true,
+                  }}
+                />
+            </h2>
         </div>
       </section>
 
