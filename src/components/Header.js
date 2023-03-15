@@ -4,7 +4,9 @@ const Header = () => {
   const currentYear = currentDate.getFullYear();
 
   return (
-    <header>
+    <header className="w-3/4">
+      <label htmlFor="my-drawer" className="drawer-overlay"></label>
+
       <i className="fa fa-times"></i>
       <div className="mak-alamin">
         <img

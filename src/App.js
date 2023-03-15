@@ -5,8 +5,16 @@ import Main from "./components/Main";
 function App() {
   return (
     <>
-      <Header></Header>
-      <Main></Main>
+      <div className="drawer drawer-mobile">
+        <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+        <div className="drawer-content">
+          <Main></Main>
+        </div>
+        <div className="drawer-side">
+          <label htmlFor="my-drawer" className="drawer-overlay"></label>
+          <Header></Header>
+        </div>
+      </div>
     </>
   );
 }

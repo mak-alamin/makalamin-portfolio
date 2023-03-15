@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Portfolio from "./Portfolio";
 
 import Typewriter from "typewriter-effect";
@@ -8,8 +7,8 @@ const Main = () => {
     "Full Stack Web Developer",
     "MERN Stack Developer",
     "WordPress Expert",
-    "UI/UX Designer"
-  ]
+    "UI/UX Designer",
+  ];
 
   return (
     <main>
@@ -18,25 +17,33 @@ const Main = () => {
         id="home"
         style={{
           background: `url("./images/coffee-relax.jpg") no-repeat center center`,
+          backgroundSize: `cover`,
         }}
       >
         <div className="overlay">
+          <label
+            htmlFor="my-drawer"
+            className="btn btn-primary drawer-button lg:hidden"
+          >
+            Menu
+          </label>
+
           <i className="fa fa-bars"></i>
-            <h3>Hi, I'm</h3>
-            <h1>
-              Mak <span>Alamin</span>
-            </h1>
-   
-            <h2>
-              I am a {" "}
-                <Typewriter
-                  options={{
-                    strings: typingTexts,
-                    autoStart: true,
-                    loop: true,
-                  }}
-                />
-            </h2>
+          <h3>Hi, I'm</h3>
+          <h1>
+            Mak <span>Alamin</span>
+          </h1>
+
+          <h2>
+            I am a{" "}
+            <Typewriter
+              options={{
+                strings: typingTexts,
+                autoStart: true,
+                loop: true,
+              }}
+            />
+          </h2>
         </div>
       </section>
 
@@ -177,13 +184,13 @@ const Main = () => {
               <a href="tel:+8801739530410"> +880 17 39 53 04 10 </a>
             </p>
             <br />
-           
-           <p>Or, </p>
 
-           <br />
-            
+            <p>Or, </p>
+
+            <br />
+
             <p>
-            <a href="skype:live:makalamin012?chat"> Get me on Skype</a>
+              <a href="skype:live:makalamin012?chat"> Get me on Skype</a>
             </p>
           </div>
 
