@@ -234,6 +234,7 @@ section.about p {
 }
 .skills-icons {
   width: 50px;
+  margin: 0 auto;
   z-index: 2;
 }
 .skills-box h3 {
@@ -243,16 +244,130 @@ section.about p {
 /* Skills end*/
 
 /* Portfolio section */
-.portfolio .row {
-  align-items: baseline;
-}
 .portfolio-item {
-  min-height: 500px;
   padding: 10px;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  transition: 0.5s ease-in-out;
+}
+.portfolio-item:hover {
+  transform: scale(1.05);
 }
 .portfolio-item h2 {
   margin-top: 20px;
 }
+.portfolio-tabs {
+  font-size: 16px;
+}
+.tab-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+.tab-buttons button {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 10px 15px;
+  font-size: 16px;
+}
+.tab-buttons button.active {
+  background: var(--color-black);
+  color: #fff;
+}
+.tab-content {
+  display: none;
+}
+.active.tab-content {
+  display: flex;
+  /* flex-flow: column wrap; */
+  gap: 20px;
+  flex-wrap: wrap;
+}
+/* Re-order items into rows */
+/* .portfolio-item:nth-child(3n + 1) {
+  order: 1;
+}
+.portfolio-item:nth-child(3n + 2) {
+  order: 2;
+}
+.portfolio-item:nth-child(3n) {
+  order: 3;
+} */
+
+/* Force new columns */
+/* .active.tab-content::before,
+.active.tab-content::after {
+  flex-basis: 100%;
+  width: 0;
+  border: 0px solid #ddd;
+  margin: 0;
+  content: "";
+  padding: 0;
+} */
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.popup-content {
+  background: #fff;
+  max-width: 600px;
+  text-align: center;
+  position: relative;
+}
+.popup-body {
+  padding: 40px;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+.popup-content h2 {
+  margin-top: 0;
+  font-weight: 600;
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+.wp-block-image,
+.wp-block-kadence-image {
+  margin: 20px auto;
+}
+.popup-content button {
+  background: #03203c;
+  color: #fff;
+  border: none;
+  padding: 0px;
+  cursor: pointer;
+  font-size: 16px;
+  position: absolute;
+  right: -20px;
+  top: -20px;
+}
+button svg {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+}
+.wp-block-button,
+.kt-btn-wrap {
+  margin: 15px 10px;
+}
+a.wp-block-button__link,
+a.kt-button {
+  background: #03203c;
+  color: #fff;
+  padding: 5px 20px;
+  margin-top: 20px;
+  border-radius: 30px;
+}
+/* Portfolio ends */
 
 /* Contact Section */
 section.contact,
@@ -326,6 +441,7 @@ section.contact {
   .drawer-side {
     width: 20%;
     position: fixed;
+    z-index: 1;
   }
   .drawer-side header {
     width: 100%;
