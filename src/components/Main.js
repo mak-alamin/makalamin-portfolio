@@ -1,8 +1,11 @@
+import { QueryClient, QueryClientProvider } from "react-query";
 import Portfolio from "./Portfolio";
 
 import Typewriter from "typewriter-effect";
 
 const Main = () => {
+  const queryClient = new QueryClient();
+
   const typingTexts = [
     "Full Stack Web Developer",
     "MERN Stack Developer",
@@ -20,12 +23,7 @@ const Main = () => {
           backgroundSize: `cover`,
         }}
       >
-        <div className="overlay">
-          <label htmlFor="my-drawer" className="drawer-button lg:hidden">
-            Menu
-          </label>
-
-          <i className="fa fa-bars"></i>
+        <div className="overlay p-5">
           <h3>Hi, I'm</h3>
           <h1>
             Mak <span>Alamin</span>
@@ -175,11 +173,13 @@ const Main = () => {
         </div>
       </section>
 
-      <Portfolio></Portfolio>
+      <QueryClientProvider client={queryClient}>
+        <Portfolio></Portfolio>
+      </QueryClientProvider>
 
       <section className="contact" id="contact">
-        <div className="row">
-          <div className="col-6">
+        <div className="columns-1 md:columns-2">
+          <div>
             <h1>Contact Me</h1>
             <h2>Email</h2>
             <p>
@@ -205,40 +205,33 @@ const Main = () => {
             </p>
           </div>
 
-          <div className="col-6">
-            <form action="#" method="post">
-              <h3 className="mb-3">Send a message</h3>
+          <form action="#" method="post">
+            <h3 className="mb-3 mt-5 text-2xl font-bold">Send a message</h3>
 
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                name="name"
-                id="name"
-                className="form-control"
-              />
+            <label htmlFor="name">Name</label>
+            <input type="text" name="name" id="name" className="form-control" />
 
-              <label htmlFor="email">Email</label>
-              <input
-                type="email"
-                name="email"
-                id="email"
-                className="form-control"
-              />
+            <label htmlFor="email">Email</label>
+            <input
+              type="email"
+              name="email"
+              id="email"
+              className="form-control"
+            />
 
-              <label htmlFor="message">Message</label>
-              <textarea
-                name="message"
-                id="message"
-                className="form-control"
-              ></textarea>
+            <label htmlFor="message">Message</label>
+            <textarea
+              name="message"
+              id="message"
+              className="form-control"
+            ></textarea>
 
-              <input
-                type="submit"
-                value="Send Message"
-                className="button-primary"
-              />
-            </form>
-          </div>
+            <input
+              type="submit"
+              value="Send Message"
+              className="button-primary"
+            />
+          </form>
         </div>
       </section>
     </main>

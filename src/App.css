@@ -151,6 +151,29 @@ nav ul li a {
 nav ul li a:hover {
   color: #fff;
 }
+label.swap {
+  position: absolute;
+  right: 1px;
+  top: 1px;
+  z-index: 999;
+  background: #03203c;
+}
+svg.swap-off,
+svg.swap-on {
+  fill: #00aeb4;
+  width: 24px;
+  height: 24px;
+}
+.swap-rotate .swap-on,
+.swap-rotate .swap-indeterminate,
+.swap-rotate input:indeterminate ~ .swap-on {
+  --tw-rotate: 90deg;
+}
+.swap .swap-on,
+.swap .swap-indeterminate,
+.swap input:indeterminate ~ .swap-on {
+  opacity: 1;
+}
 /* Header style ends */
 
 /* Home Section */
@@ -215,7 +238,7 @@ section.about p {
 /* Skills Section */
 .skills-container {
   display: grid;
-  grid-template-columns: repeat(5, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(140px, 5fr));
   justify-content: center;
   align-items: center;
   text-align: center;
@@ -244,6 +267,12 @@ section.about p {
 /* Skills end*/
 
 /* Portfolio section */
+.portfolio-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  justify-content: center;
+}
 .portfolio-item {
   padding: 10px;
   cursor: pointer;
@@ -453,5 +482,44 @@ section.contact {
   main {
     margin-left: auto;
     width: 80%;
+  }
+}
+
+@media (max-width: 767px) {
+  .home h1,
+  .home h1 span {
+    font-size: 50px;
+  }
+  .home h2,
+  .home h2 span {
+    font-size: 1.1rem;
+  }
+  section.about,
+  section.services,
+  section.skills,
+  section.portfolio,
+  section.contact {
+    padding: 50px 30px;
+  }
+  .portfolio-row {
+    gap: 20px;
+  }
+  .portfolio-item {
+    flex-basis: 44%;
+  }
+  .popup-content button {
+    right: 1px;
+    top: 1px;
+  }
+  .popup-content {
+    margin-top: 40px;
+  }
+  .btn-circle {
+    height: 10px;
+    width: 30px;
+  }
+  .skills-container {
+    padding: 1rem 30px;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
   }
 }
