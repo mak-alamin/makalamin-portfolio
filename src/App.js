@@ -30,8 +30,6 @@ function App() {
 
   const [swapStatus, setSwapStatus] = useState(false);
 
-  console.log(swapStatus);
-
   return (
     <>
       <div className="drawer drawer-mobile">

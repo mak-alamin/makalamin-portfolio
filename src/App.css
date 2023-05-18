@@ -153,8 +153,8 @@ nav ul li a:hover {
 }
 label.swap {
   position: absolute;
-  right: 1px;
-  top: 1px;
+  right: 5px;
+  top: 5px;
   z-index: 999;
   background: #03203c;
 }
@@ -508,8 +508,8 @@ section.contact {
     flex-basis: 44%;
   }
   .popup-content button {
-    right: 1px;
-    top: 1px;
+    right: 5px;
+    top: 5px;
   }
   .popup-content {
     margin-top: 40px;
