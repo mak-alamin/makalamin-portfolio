@@ -7,6 +7,8 @@ const Contact = () => {
   const [submitText, setSubmitText] = useState("Send Message");
   const [success, setSuccess] = useState(false);
 
+  const [errorMSG, setErrorMSG] = useState('');
+
   const {
     register,
     handleSubmit,
@@ -18,27 +20,23 @@ const Contact = () => {
   const onSubmit = (data) => {
     setSubmitText("Sending...");
 
-    console.log(data);
-
     emailjs
       .sendForm(
-        "service_8pae6yd",
-        "template_6v5u1oo",
+        process.env.REACT_APP_EMAIL_SERVICE_ID,
+        process.env.REACT_APP_EMAIL_TEMPLATE,
         form.current,
-        "tctXy7Oujf7pOJgzc"
+        process.env.REACT_APP_EMAIL_PUBLIC_API
       )
       .then(
         (result) => {
-          console.log(result.text);
-
           setSuccess(true);
 
           setSubmitText("Send Message");
         },
         (error) => {
-          console.log(error.text);
-
           setSuccess(false);
+          setErrorMSG("Something went wrong! Please try again later.");
+
           setSubmitText("Send Message");
         }
       );
@@ -116,6 +114,8 @@ const Contact = () => {
               value={submitText}
               className="button-primary"
             />
+
+            {(errorMSG) && <p className="text-red-500">{errorMSG}</p>}
           </form>
         )}
     </section>
