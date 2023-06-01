@@ -48,7 +48,8 @@ body {
   text-align: center;
 }
 .button-primary,
-.button-secondary {
+.button-secondary,
+.button-blue {
   background-color: var(--color-black);
   display: inline-block;
   border-radius: 5px;
@@ -64,6 +65,14 @@ body {
   background-color: var(--link-gray);
   color: var(--color-black);
 }
+.button-blue {
+  background-color: var(--link-blue);
+}
+a.cta-button:hover{
+  transition: .3s ease-in-out;
+  transform: scale(1.05);
+}
+
 img {
   width: 100%;
 }
@@ -415,14 +424,21 @@ section.contact {
 .contact p a {
   color: var(--link-blue);
 }
+section#contact > div {
+  flex-basis: 45%;
+}
 .contact form {
+  flex-basis: 45%;
   max-width: 600px;
   margin: 0 auto;
+}
+.contact form > div{
+  margin-bottom: 12px;
 }
 .contact form input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 3px;
   border-radius: 5px;
   border: 1px solid #ccc;
 }
