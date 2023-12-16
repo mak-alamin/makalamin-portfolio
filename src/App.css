@@ -215,7 +215,7 @@ section.home {
   color: var(--link-light);
 }
 .home h3 {
-  color: var(--color-black);
+  color: #fff;
   font-size: 22px;
 }
 .Typewriter {
@@ -279,22 +279,36 @@ section.about p {
 .portfolio-row {
   display: flex;
   flex-wrap: wrap;
-  gap: 40px 50px;
+  gap: 40px;
   justify-content: center;
 }
 .portfolio-item {
-  padding: 10px;
+  padding:0px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: 0.5s ease-in-out;
+  min-height: 200px;
   max-height: 360px;
   overflow: hidden;
+  position: relative;
 }
 .portfolio-item:hover {
   transform: scale(1.05);
 }
 .portfolio-item h2 {
-  margin-top: 20px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  padding: 8px;
+  background: #dae6fca6;
+  color: #03203c;
+  min-height: 62px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Oswald';
+  font-weight: 700;
 }
 .portfolio-tabs {
   font-size: 16px;
@@ -444,10 +458,6 @@ section#contact > div {
   border-radius: 5px;
   border: 1px solid #ccc;
 }
-.contact form input[type="submit"] {
-  max-width: 200px;
-}
-
 .contact form textarea {
   width: 100%;
   padding: 10px;
@@ -523,7 +533,9 @@ section#contact > div {
     gap: 20px;
   }
   .portfolio-item {
-    flex-basis: 44%;
+    flex-basis: 45%;
+    max-height: 200px;
+    padding: 5px;
   }
   .popup-content button {
     right: 5px;
