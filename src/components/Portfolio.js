@@ -42,9 +42,9 @@ const Portfolio = () => {
             <div
               onClick={() => handlePortfolioClick(portfolio)}
               key={portfolio.id}
-              className="portfolio-item col-4"
+              className="portfolio-item col-3"
             >
-              <img src={portfolio?.featuredImage} alt="portfolio-1" />
+              <img src={portfolio?.featuredImage} alt={portfolio?.title} />
               <h2>{portfolio?.title}</h2>
             </div>
           ))}
