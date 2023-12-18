@@ -42,9 +42,11 @@ function App() {
         </label>
 
         <input id="my-drawer" type="checkbox" className="drawer-toggle" />
+
         <div className="drawer-content">
           <Main></Main>
         </div>
+
         <div className="drawer-side">
           <label
             htmlFor="my-drawer"
