@@ -1,4 +1,4 @@
-const Header = () => {
+const Header = ({setSwapStatus}) => {
   const currentDate = new Date();
 
   const currentYear = currentDate.getFullYear();
@@ -18,7 +18,7 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#home" onClick={()=> setSwapStatus(false)}>Home</a>
           </li>
           <li>
             <a href="#about">About Me</a>
