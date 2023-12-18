@@ -156,14 +156,17 @@ nav {
 nav ul li {
   list-style: none;
 }
-nav ul li a {
+nav ul li a,
+nav ul li label {
+  cursor: pointer;
   display: block;
   padding: 10px;
   color: var(--link-gray);
   text-decoration: none;
   transition: 0.3s all ease-in-out;
 }
-nav ul li a:hover {
+nav ul li a:hover,
+nav ul li label:hover {
   color: #fff;
 }
 label.swap {

@@ -1,12 +1,15 @@
-const Header = ({setSwapStatus}) => {
+const Header = ({ setSwapStatus, swapStatus }) => {
   const currentDate = new Date();
 
   const currentYear = currentDate.getFullYear();
 
+  const scrollToSection = (id) => {
+    document.getElementById(id).scrollIntoView({ behavior: "smooth" });
+    setSwapStatus(!swapStatus);
+  };
+
   return (
     <header className="w-3/4">
-      <label htmlFor="my-drawer" className="drawer-overlay"></label>
-
       <i className="fa fa-times"></i>
       <div className="mak-alamin">
         <img
@@ -18,19 +21,32 @@ const Header = ({setSwapStatus}) => {
       <nav>
         <ul>
           <li>
-            <a href="#home" onClick={()=> setSwapStatus(false)}>Home</a>
+            <label htmlFor="my-drawer" onClick={() => scrollToSection("home")}>
+              home
+            </label>
           </li>
           <li>
-            <a href="#about">About Me</a>
+            <label htmlFor="my-drawer" onClick={() => scrollToSection("about")}>
+              About Me
+            </label>
           </li>
           <li>
-            <a href="#skills">My Skills</a>
+            <label
+              htmlFor="my-drawer"
+              onClick={() => scrollToSection("skills")}
+            >My Skills</label>
           </li>
           <li>
-            <a href="#portfolio">My Works</a>
+            <label
+              htmlFor="my-drawer"
+              onClick={() => scrollToSection("portfolio")}
+            > My Works </label>
           </li>
           <li>
-            <a href="#contact">Contact Me</a>
+            <label
+              htmlFor="my-drawer"
+              onClick={() => scrollToSection("contact")}
+            > Contact Me </label>
           </li>
         </ul>
       </nav>

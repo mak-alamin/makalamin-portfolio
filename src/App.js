@@ -32,7 +32,8 @@ function App() {
             className="drawer-overlay"
             onClick={() => setSwapStatus(!swapStatus)}
           ></label>
-          <Header setSwapStatus={setSwapStatus}></Header>
+
+          <Header setSwapStatus={setSwapStatus} swapStatus={swapStatus}></Header>
         </div>
       </div>
     </>
