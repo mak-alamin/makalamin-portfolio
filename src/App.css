@@ -370,7 +370,6 @@ section.about p {
   z-index: 999;
   display: flex;
   justify-content: center;
-  align-items: center;
 }
 .popup-content {
   background: #fff;
@@ -454,16 +453,16 @@ section#contact > div {
 .contact form input {
   width: 100%;
   padding: 10px;
-  margin-bottom: 3px;
+  margin-bottom: 16px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #03203c54;
 }
 .contact form textarea {
   width: 100%;
   padding: 10px;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
   border-radius: 5px;
-  border: 1px solid #ccc;
+  border: 1px solid #03203c54;
 }
 /* Contact ends */
 
@@ -538,11 +537,11 @@ section#contact > div {
     padding: 5px;
   }
   .popup-content button {
-    right: 5px;
+    left: 5px;
     top: 5px;
-  }
+}
   .popup-content {
-    margin-top: 40px;
+    margin-top: 0px;
   }
   .btn-circle {
     height: 10px;
