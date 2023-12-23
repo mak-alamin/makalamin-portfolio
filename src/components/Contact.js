@@ -68,10 +68,10 @@ const Contact = () => {
         </div>
 
         {success ? (
-          <p className="mt-10 text-center text-[#06B76A] font-semibold"> <img src={TickCircle} alt="success" className="w-12 mx-auto mb-2" /> Your message has been sent. Thank you for reaching out to me. I'll be in touch with you soon! </p>
+          <p className="mt-10 text-center text-[#06B76A] font-semibold"> <img src={TickCircle} alt="success" className="w-12 mx-auto mb-2" /> Your message has been sent. Thank you for reaching out to me. I'll be in touch with you asap! </p>
         ) : (
           <form ref={form} onSubmit={handleSubmit(onSubmit)}>
-            <h3 className="mb-3 mt-5 text-2xl font-bold">Send a message</h3>
+            <h3 className="mb-3 mt-5 text-2xl font-bold">Send me a message</h3>
 
             <div>
               <label htmlFor="your_name">

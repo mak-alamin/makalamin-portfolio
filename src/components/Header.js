@@ -22,7 +22,7 @@ const Header = ({ setSwapStatus, swapStatus }) => {
         <ul>
           <li>
             <label htmlFor="my-drawer" onClick={() => scrollToSection("home")}>
-              home
+              Home
             </label>
           </li>
           <li>
