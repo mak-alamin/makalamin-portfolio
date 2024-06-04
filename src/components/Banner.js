@@ -36,7 +36,7 @@ const Banner = () => {
           </h2>
 
           <div className='cta-buttons mt-10'>
-          <a href="#portfolio" className="cta-button button-blue mt-3 mr-3">
+          <a href="#portfolio" className="cta-button button-dark-blue mt-3 mr-5">
             See My Works
           </a>
           <a href="#contact" className="cta-button button-primary mt-3">
