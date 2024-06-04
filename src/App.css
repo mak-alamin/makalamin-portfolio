@@ -205,8 +205,30 @@ header .hire-me {
   text-align: center;
   margin-top: 25px;
 }
-header .hire-me p{
+header .hire-me p,
+header .hire-me p a{
   color: #fff;
+  font-size: 15px;
+}
+header .hire-me img {
+  max-width: 68px;
+}
+header .hire-me .marketplaces {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 8px;
+}
+header .hire-me .marketplaces a {
+  background: #fefefe;
+  display: inline-block;
+  height: 34px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  border-radius: 30px;
 }
 /* Header style ends */
 

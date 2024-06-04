@@ -60,7 +60,10 @@ const Header = ({ setSwapStatus, swapStatus }) => {
       </nav>
 
       <div className="hire-me">
-         <p>Hire me on: <a href="https://www.fiverr.com/mak_alamin" target="_blank" rel="noreferrer">Fiverr</a>, <a href="https://www.upwork.com/freelancers/~01e7a7c3690adbb2aa?mp_source=share" target="_blank" rel="noreferrer">UpWork</a></p>
+         <p>Hire me on:</p>
+         <p className="marketplaces">
+         <a href="https://www.fiverr.com/mak_alamin" target="_blank" rel="noreferrer"><img src="/images/fiverr.jpg" alt="mak-alamin-fiverr" /></a> <a href="https://www.upwork.com/freelancers/~01e7a7c3690adbb2aa?mp_source=share" target="_blank" rel="noreferrer"><img src="/images/upwork.png" alt="mak-alamin-fiverr" /></a>
+         </p>
       </div>
 
       <div className="nav-footer">
