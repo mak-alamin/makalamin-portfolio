@@ -147,8 +147,11 @@ header i.fa.fa-times,
   text-align: center;
 }
 .mak-alamin img {
-  max-width: 240px;
-  margin: 0 auto;
+  width: 100%;
+  max-width: 180px;
+  margin: 30px auto 5px;
+  border-radius: 60%;
+  border: 10px solid #03284bfc;
 }
 .mak-alamin h1 {
   color: #fff;

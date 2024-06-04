@@ -13,7 +13,7 @@ const Header = ({ setSwapStatus, swapStatus }) => {
       <i className="fa fa-times"></i>
       <div className="mak-alamin">
         <img
-          src="images/mak-alamin-web-developer.png"
+          src="images/mak-alamin-web-developer-wordpress-expert.jpg"
           alt="mak-alamin-web-developer"
         />
         <h1>Mak Alamin</h1>
