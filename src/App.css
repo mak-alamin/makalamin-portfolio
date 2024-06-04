@@ -197,6 +197,14 @@ svg.swap-on {
 .swap input:indeterminate ~ .swap-on {
   opacity: 1;
 }
+
+header .hire-me {
+  text-align: center;
+  margin-top: 25px;
+}
+header .hire-me p{
+  color: #fff;
+}
 /* Header style ends */
 
 /* Home Section */

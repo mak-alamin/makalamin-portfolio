@@ -34,22 +34,34 @@ const Header = ({ setSwapStatus, swapStatus }) => {
             <label
               htmlFor="my-drawer"
               onClick={() => scrollToSection("skills")}
-            >My Skills</label>
+            >
+              My Skills
+            </label>
           </li>
           <li>
             <label
               htmlFor="my-drawer"
               onClick={() => scrollToSection("portfolio")}
-            > My Works </label>
+            >
+              {" "}
+              My Works{" "}
+            </label>
           </li>
           <li>
             <label
               htmlFor="my-drawer"
               onClick={() => scrollToSection("contact")}
-            > Contact Me </label>
+            >
+              {" "}
+              Contact Me{" "}
+            </label>
           </li>
         </ul>
       </nav>
+
+      <div className="hire-me">
+         <p>Hire me on: <a href="https://www.fiverr.com/mak_alamin" target="_blank" rel="noreferrer">Fiverr</a>, <a href="https://www.upwork.com/freelancers/~01e7a7c3690adbb2aa?mp_source=share" target="_blank" rel="noreferrer">UpWork</a></p>
+      </div>
 
       <div className="nav-footer">
         <ul>
