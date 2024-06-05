@@ -1,4 +1,6 @@
 import { useEffect, useState } from "react";
+import Tabs from "./Tabs.js";
+import PortfolioItems from "./Portfolio/PortfolioItems.js";
 
 const Portfolio = () => {
   const [showPopup, setShowPopup] = useState(false);
@@ -23,32 +25,23 @@ const Portfolio = () => {
       .then((data) => setPortfolios(data));
   }, []);
 
-  if (!portfolios.length) {
-    return (
-      <section className="portfolio" id="portfolio">
-        <h1>My Works</h1>
-        <h3>Loading... </h3>
-      </section>
-    );
-  }
-
   return (
     <section className="portfolio" id="portfolio">
       <h1>My Works</h1>
 
-      <div className="portfolio-row">
-        {portfolios.length &&
-          portfolios.map((portfolio, i) => (
-            <div
-              onClick={() => handlePortfolioClick(portfolio)}
-              key={portfolio.id}
-              className="portfolio-item col-3"
-            >
-              <img src={portfolio?.featuredImage} alt={portfolio?.title} />
-              <h2>{portfolio?.title}</h2>
-            </div>
-          ))}
-      </div>
+      <Tabs
+        tabs={[
+          {
+            title: "WordPress Websites",
+            content: <PortfolioItems items={portfolios} handlePortfolioClick={handlePortfolioClick} />,
+          },
+          {
+            title: "WordPress Plugins",
+            content: "WordPress Plugins coming soon",
+          },
+          { title: "Custom Web Apps", content: "Coming soon" },
+        ]}
+      ></Tabs>
 
       {showPopup && (
         <div className="popup">

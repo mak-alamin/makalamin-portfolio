@@ -1,3 +1,4 @@
 1. Firebase login
-2. npm run build
-3. Firebase deploy
+2. Firebase init
+3. npm run build
+4. Firebase deploy

@@ -323,11 +323,31 @@ section.about p {
 /* Skills end*/
 
 /* Portfolio section */
+section#portfolio {
+  justify-content: flex-start;
+}
+.mak-tabs {
+  width: 100%;
+  max-width: 900px;
+  margin: 0 auto;
+}
+.mak-tabs .tabs button.tab.tab-active {
+  background: #03203c;
+}
+.portfolio .tabs {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  background: #f1f6ff;
+}
+
 .portfolio-row {
   display: flex;
   flex-wrap: wrap;
   gap: 40px;
-  justify-content: center;
+  justify-content: space-evenly;
 }
 .portfolio-item {
   padding:0px;
@@ -407,7 +427,7 @@ section.about p {
   padding: 0;
 } */
 
-.popup {
+#portfolio .popup {
   position: fixed;
   top: 0;
   left: 0;
@@ -418,18 +438,21 @@ section.about p {
   display: flex;
   justify-content: center;
 }
-.popup-content {
+#portfolio .popup-content {
   background: #fff;
-  max-width: 600px;
+  max-width: 720px;
   text-align: center;
   position: relative;
+  height: 96vh;
+  margin-top: 20px;
+  border-radius: 4px;
 }
-.popup-body {
+#portfolio .popup-body {
   padding: 40px;
   max-height: 90vh;
   overflow-y: auto;
 }
-.popup-content h2 {
+#portfolio .popup-content h2 {
   margin-top: 0;
   font-weight: 600;
   font-size: 24px;
@@ -439,7 +462,7 @@ section.about p {
 .wp-block-kadence-image {
   margin: 20px auto;
 }
-.popup-content button {
+#portfolio .popup-content button {
   background: #03203c;
   color: #fff;
   border: none;
