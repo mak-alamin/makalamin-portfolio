@@ -73,8 +73,8 @@ body {
 .button-dark-blue {
   background-color: var(--color-dark-blue);
 }
-a.cta-button:hover{
-  transition: .3s ease-in-out;
+a.cta-button:hover {
+  transition: 0.3s ease-in-out;
   transform: scale(1.05);
 }
 
@@ -206,7 +206,7 @@ header .hire-me {
   margin-top: 25px;
 }
 header .hire-me p,
-header .hire-me p a{
+header .hire-me p a {
   color: #fff;
   font-size: 15px;
 }
@@ -350,7 +350,7 @@ section#portfolio {
   justify-content: space-evenly;
 }
 .portfolio-item {
-  padding:0px;
+  padding: 0px;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
   transition: 0.5s ease-in-out;
@@ -374,7 +374,7 @@ section#portfolio {
   display: flex;
   justify-content: center;
   align-items: center;
-  font-family: 'Oswald';
+  font-family: "Oswald";
   font-weight: 700;
 }
 .portfolio-tabs {
@@ -443,9 +443,7 @@ section#portfolio {
   max-width: 720px;
   text-align: center;
   position: relative;
-  height: 96vh;
-  margin-top: 20px;
-  border-radius: 4px;
+  height: 100vh;
 }
 #portfolio .popup-body {
   padding: 40px;
@@ -495,7 +493,7 @@ a.kt-button {
 /* Contact Section */
 section.contact,
 section.skills {
-  background-color: #F5F9FF;
+  background-color: #f5f9ff;
 }
 section.contact {
   text-align: left;
@@ -518,7 +516,7 @@ section#contact > div {
   max-width: 600px;
   margin: 0 auto;
 }
-.contact form > div{
+.contact form > div {
   margin-bottom: 12px;
 }
 .contact form input {
@@ -564,12 +562,32 @@ section#contact > div {
 /* Footer ends */
 
 /* Responsive */
-@media (min-width: 768px) {
+@media (max-width: 1360px) {
+  #portfolio .popup-content {
+    max-width: 560px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1024px) {
+  main {
+    margin-left: auto;
+    width: 80%;
+  }
   .drawer-side {
     width: 20%;
     position: fixed;
     z-index: 1;
   }
+}
+
+/* Tablets and Desktops */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .drawer-side {
+    width: 40%;
+  }
+}
+@media (min-width: 768px) {
   .drawer-side header {
     width: 100%;
     display: flex;
@@ -577,12 +595,14 @@ section#contact > div {
     justify-content: space-between;
     padding-bottom: 20px;
   }
-  main {
-    margin-left: auto;
-    width: 80%;
+  #portfolio .popup-content {
+    height: 96vh;
+    margin-top: 20px;
+    border-radius: 4px;
   }
 }
 
+/* Mobile Devices */
 @media (max-width: 767px) {
   .home h1,
   .home h1 span {
@@ -607,12 +627,12 @@ section#contact > div {
     max-height: 200px;
     padding: 5px;
   }
-  .popup-content button {
+  #portfolio .popup-content {
+    margin-top: 0px;
+  }
+  #portfolio .popup-content button {
     left: 5px;
     top: 5px;
-}
-  .popup-content {
-    margin-top: 0px;
   }
   .btn-circle {
     height: 10px;
