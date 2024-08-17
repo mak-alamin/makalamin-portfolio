@@ -344,7 +344,9 @@ section#portfolio {
   padding: 8px;
   background: #f1f6ff;
 }
-
+.tabs-boxed .tab {
+  color: #03203c;
+}
 .portfolio-row {
   display: flex;
   flex-wrap: wrap;
@@ -622,6 +624,9 @@ section#contact > div {
   section.contact {
     padding: 50px 30px;
   }
+  section.about p {
+    text-align: left;
+  }
   .portfolio-row {
     gap: 20px;
   }
@@ -644,5 +649,11 @@ section#contact > div {
   .skills-container {
     padding: 1rem 30px;
     grid-template-columns: repeat(auto-fit, minmax(100px, 5fr));
+  }
+}
+
+@media (max-width: 639px) {
+  .contact form {
+    margin: 0;
   }
 }

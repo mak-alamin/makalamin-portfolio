@@ -43,7 +43,7 @@ const Contact = () => {
   };
 
   return (
-    <section className="contact md:flex-row items-center" id="contact">
+    <section className="contact md:flex-row sm:items-center" id="contact">
         <div className="md:pl-10">
           <h1>Contact Me</h1>
           <h2>Email</h2>
