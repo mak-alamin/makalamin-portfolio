@@ -35,7 +35,7 @@ const Contact = () => {
         },
         (error) => {
           setSuccess(false);
-          setErrorMSG("Something went wrong! Please try again later.");
+          setErrorMSG("Something went wrong! Please try again later or choose another option to contact me.");
 
           setSubmitText("Send Message");
         }
